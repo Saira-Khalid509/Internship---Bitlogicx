@@ -1,0 +1,27 @@
+def fabo(n):
+    if n ==1:
+        return 0
+    elif n==2:
+        return 1
+    else:
+        return fabo(n-2) + fabo(n-1)
+N =int(input("Enter a number"))
+for i in range(1, N+1):
+    print(fabo(i))
+fabo(N)
+
+#PRIME NUMBERS
+
+num = int(input("Enter a number: "))
+for i in range(2,num):
+
+    if (num % i) == 0:
+        isprime = False
+        break
+    else:
+        isprime = True
+
+if isprime == False:
+    print(f"{num} is not prime number")
+else:
+    print(f"{num} is Prime number")
