@@ -1,0 +1,72 @@
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+
+    """res = []
+    for i in range(x+1):
+        for j in range(y+1):
+            for k in range(z+1):
+                if i+j+k != n:
+                    res.append([i,j,k])
+    print(res)"""
+
+
+    res = [[i,j,k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if i+j+k != n]
+    print(res)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    ls = set(arr)
+    ls = sorted(ls)
+
+    print(ls[-2])
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    marks = student_marks[query_name]
+    #format(exp, .nf)
+    #print(format(sum(marks)/3), .2f)
+    print("%.2f" % (sum(marks)/3))
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+if __name__ == '__main__':
+    ls = []
+    N = int(input())
+    for i in range(N):
+        inp = input().split()
+        if inp[0] == 'insert':
+            ls.insert(int(inp[1]), (int(inp[2])))
+        elif inp[0] == 'print':
+            print(ls)
+        elif inp[0] == 'remove':
+            ls.remove(int(inp[1]))
+        elif inp[0] == 'append':
+            ls.append(int(inp[1]))
+        elif inp[0] == 'sort':
+            ls.sort()
+        elif inp[0] == 'pop':
+            ls.pop()
+        else:
+            ls.reverse()
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+if __name__ == '__main__':
+    n = int(input())
+    integer_list = map(int, input().split())
+    integer_list = tuple(integer_list)
+    print(hash(integer_list))
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
