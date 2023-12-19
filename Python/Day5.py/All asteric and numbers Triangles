@@ -1,0 +1,177 @@
+n=5
+for i in range(n):
+    for j in range(n-i):
+        print(" ", end=" ")
+    for j in range(i+1):
+        print("*", end=" ")                              #        *
+    for i in range(i):                                   #      * * *
+        print("*", end=" ")                              #    * * * * *
+    print()                                              #  * * * * * * *
+                                                         # *  * * * * * * *
+------------------------------------------------------------------------------------------------------------------
+#desreasig Hill Pattern
+n=10                                                     # * * * * * * * * * * * * * * * * * * * 
+ for i in range(n):                                      #   * * * * * * * * * * * * * * * * * 
+    for j in range(i+1):                                 #     * * * * * * * * * * * * * * *
+        print(" ", end=" ")                              #       * * * * * * * * * * * * *
+    for j in range(n-(i+1)):                             #         * * * * * * * * * * *
+        print("*", end=" ")                              #           * * * * * * * * * 
+    for j in range(n-i):                                 #             * * * * * * * 
+        print("*", end=" ")                              #               * * * * *
+    print()                                              #                 * * *                                
+                                                         #                   *                            
+                                                        
+-------------------------------------------------------------------------------------------------------------------
+#left increasing digits                                  #  1
+n=8                                                      #  2 2
+p=1                                                      #  3 3 3
+for i in range(n):                                       #  4 4 4 4                   
+    for j in range(i+1):                                 #  5 5 5 5 5
+        print(p, end=' ')                                #  6 6 6 6 6 6
+    p+=1                                                 #  7 7 7 7 7 7 7
+    print()                                              #  8 8 8 8 8 8 8 8
+------------------------------------------------------------------------------------------------------------------
+#decreasig digits: left align
+n=5                                                      # 1 1 1 1 1
+p=1                                                      # 2 2 2 2
+for i in range(n):                                       # 3 3 3
+    for j in range(n-i):                                 # 4 4     
+        print(p, end=" ")                                # 5 
+    p+=1
+    print()
+-------------------------------------------------------------------------------------------------------------------
+Increasing digits
+n=5                                                       #        1
+p=1                                                       #      2 2
+for i in range(n):                                        #    3 3 3 
+    for j in range(n-i):                                  #  4 4 4 4
+        print(" ", end=" ")                               #5 5 5 5 5
+    for j in range(i+1):
+        print(p, end=" ")
+    p+=1
+    print()
+--------------------------------------------------------------------------------------------------------------------
+n=5
+p=1
+for i in range(n):
+    for j in range(i+1):
+        print(" ", end=" ")
+    for j in range(n-i):
+        print(p, end=" ")
+    p+=1
+    print()
+-------------------------------------------------------------------------------------------------------------------
+n=5
+p=1
+for i in range(n):
+    for j in range(n-i):
+        print(" ", end=" ")
+    for j in range(i):                    # increasing pyramid
+        print(p, end=" ")
+    for j in range(i+1):
+        print(p, end=" ")
+    p+=1
+    print()
+--------------------------------------------------------------------------------------------------------------------
+n=5
+p=5
+for i in range(n):
+    for j in range(i+1):
+        print(" ", end=" ")
+    for j in range(n-(i+1)):
+        print(p, end=" ")
+    for j in range(n-i):
+        print(p, end=" ")
+    p-=1
+    print()
+----------------------------------------------------------------------------------------------------------------------
+n=5
+# p=1
+for i in range(n):
+    for j in range(i+1):
+        print(" ", end=" ")
+    p=i+1
+    for j in range(n-i):
+        print(p, end=" ")
+        p+=1
+    
+    print()
+-------------------------------------------------------------------------------------------------------------------------
+n=5
+# p=1                                      #1
+for i in range(n):                         #1 2
+    p=1                                    #1 2 3
+    for j in range(i+1):                   #1 2 3 4
+        print(p, end=" ")                  #1 2 3 4 5
+        p+=1
+    print()
+
+--------------------------------------------------------------------------------------------------------------------------
+n=5
+for i in range(n):
+    
+    for j in range(n-i):
+        print(" ", end=" ")
+    p=i+1
+    for j in range(i+1):
+        print(p, end=" ")
+        p-=1
+    print()
+
+-----------------------------------------------------------------------------------------------------------------------------
+n=5
+for i in range(n):
+    for i in range(n-i):
+        print(" ", end=" ")
+    p=1
+    for j in range(i+1):
+        print(p, end=" ")
+        p+=1
+    print()
+    p=i+1
+    for j in range(i+1):
+        print(p, end=" ")
+        p-=1
+    print()
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+n=5
+p=1                                      #increasing pyramid 
+for i in range(n):                     
+    p=1                                   
+    for j in range(i+1):                  
+        print(p, end=" ")                  
+        p+=1
+    print()
+for i in range(n):
+    for j in range(n-i):
+        print(" ", end=" ")
+    p=i+1
+    for j in range(i+1):
+        print(p, end=" ")
+        p-=1   
+    p+=2 
+    for j in range(i):                   
+        print(p, end=" ")                  
+        p+=1        
+    print()
+
+------------------------------------------------------------------------------------------------------------------------
+n=5
+for i in range(n):
+    for j in range(i+1):
+        print(" ", end=" ")
+    p=i+1
+    #    
+    # p+=1                                      decreasing digits pyramid
+     
+    for j in range(n-i):                   
+        print(p, end=" ")                  
+        p+=1 
+    p = n-1
+    for j in range(n-(i+1)):
+        print(p, end=" ")
+        p-=1       
+    print()
